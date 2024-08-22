@@ -27,27 +27,27 @@
 
         <fieldset>
           <legend>Título da despesa</legend>
-          <input type="text" placeholder="Qual a despesa?">
+          <input type="text" placeholder="Qual a despesa?" required id="refundTitle">
         </fieldset>
 
         <fieldset>
           <legend>Categoria</legend>
-          <select name="" id="">
+          <select name="" id="refund-type" required>
             <option value="Selecione" hidden disabled selected>Selecione</option>
-            <option value="Alimentação">Alimentação</option>
-            <option value="Hospedagem">Hospedagem</option>
-            <option value="Transporte">Transporte</option>
-            <option value="Serviços">Serviços</option>
-            <option value="Outros">Outros</option>
+            <option value="food">Alimentação</option>
+            <option value="hostel">Hospedagem</option>
+            <option value="transport">Transporte</option>
+            <option value="service">Serviços</option>
+            <option value="other">Outros</option>
           </select>
         </fieldset>
 
         <fieldset>
           <legend>Valor</legend>
-          <input type="text" placeholder="00,00">
+          <input type="text" placeholder="00,00" required id="amount">
         </fieldset>
 
-        <button>Adicionar Despesa</button>
+        <button id="btn">Adicionar Despesa</button>
       </form>
     </main>
 
@@ -57,27 +57,27 @@
         <span>Minhas solicitações</span>
         <div class="separator"></div>
         <span class="despesas">6 despesas</span>
-        <span class="amount">R$200,00</span>
+        <span class="total-amount"> <span class="symbol">R$</span>200,00</span>
       </header>
       <div class="separator-line"></div>
-      <ul>
-        <li>
+      <ul id="unoder-list">
+        <!-- <li>
           <div class="refund-title">
-            <img src="assets/ForkKnife.svg" alt="">
+            <img src="assets/ForkKnife.svg" alt="" id="description-image">
             <div class="text-refund">
-              <h3>Almoço</h3>
-              <span>Alimentaçã</span>
+              <h3 id="description-title">Almoço</h3>
+              <span id="description-type">Alimentaçã</span>
             </div>
           </div>
-          <div class="amount">
-            <span>R$ 100,00</span>
+          <div class="amount-div">
+            <span> <span class="symbol" id="description-symbol">R$</span id="description-amount"> 100,00</span>
             <img src="assets/X-Bold.svg" alt="">
           </div>
-        </li>
+        </li> -->
       </ul>
     </aside>
   </section>
-
+  <script src="script.js"></script>
 </body>
 
 </html>
